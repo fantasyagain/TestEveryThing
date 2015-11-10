@@ -16,6 +16,9 @@ public class TestCGLib {
     }
 }
 
+/*
+*被代理的类
+ */
 class HelloWorld{
     public void sayHello(){
         System.out.println("hello world 1527");
@@ -23,19 +26,26 @@ class HelloWorld{
 
 }
 
+/*
+*方法拦截器
+ */
 class MyMethodInterceptor implements MethodInterceptor{
 
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("--------before---------");
         //method.invoke(o, objects);
-        methodProxy.invokeSuper(o, objects);
+        methodProxy.invokeSuper(o, objects);    //方法代理调用父类的方法
         System.out.println("----------after----------");
         return null;
     }
 }
 
 class ProxyFactory{
+
+    /*
+    *产生代理类
+     */
     public static Object getProxyObject(String cname) throws ClassNotFoundException {
         Class<?> superClass= Class.forName(cname);
         Enhancer enhancer=new Enhancer();
