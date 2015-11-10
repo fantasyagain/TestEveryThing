@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ant-1.6.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/ant-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-util-4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cglib-3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
